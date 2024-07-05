@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "7b1d4363-d1aa-4366-9222-4c0e53613594",
+		"name": "Authentication API",
+		"description": "Postman collection for authentication API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27638182"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"demo78204@gmail.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"password123\",\n  \"confPassword\": \"password123\",\n  \"gender\": \"Male\",\n  \"address\": \"123 Street, City, State, Country\",\n  \"hobbies\": [\"reading\", \"traveling\"],\n  \"dob\": \"1990-01-01\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign Up",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"demo78204@gmail.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"password123\",\n  \"confPassword\": \"password123\",\n  \"gender\": \"Male\",\n  \"address\": \"123 Street, City, State, Country\",\n  \"hobbies\": [\"reading\", \"traveling\"],\n  \"dob\": \"1990-01-01\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-L4ChN3EFRYuIiTpWUtpbvMTfrpg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jul 2024 15:51:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"demo78204@gmail.com\",\n  \"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/signin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign In",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"demo78204@gmail.com\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "233"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e9-jjtXdSdE/gq5joG1xVl+15n1e7g\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jul 2024 15:52:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODZjNTA3MTI0NzRjMzUxNDVhMzMwNCIsImlhdCI6MTcyMDEwODM3NiwiZXhwIjoxNzIwMTExOTc2fQ.K_xc4VqAJJIUpCSBpDoqmP4ZazlYyyoEY-OGBQfxNYw\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"demo78204@gmail.com\",\n    \"password\": \"newpassword123\",\n  \"confPassword\": \"newpassword123\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/forgot-password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"demo78204@gmail.com\",\n  \"password\": \"newpassword123\",\n  \"confPassword\": \"newpassword123\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/reset-password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"demo78204@gmail.com\",\n  \"password\": \"newpassword123\",\n  \"confPassword\": \"newpassword123\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/reset-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-2Gib5CWmd6iCx7e709n4PLv/myk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jul 2024 15:56:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Password reset successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign Out",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer <JWT_TOKEN>"
+					}
+				],
+				"url": {
+					"raw": "/api/auth/signout",
+					"path": [
+						"api",
+						"auth",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Registered User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer <JWT_TOKEN>"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Registered User List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <JWT_TOKEN>"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "355"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"163-cMSR6NWeS/2y9eM13fDS7y5AdoA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jul 2024 15:55:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6686c50712474c35145a3304\",\n            \"name\": \"John Doe\",\n            \"email\": \"demo78204@gmail.com\",\n            \"phone\": \"1234567890\",\n            \"password\": \"$2a$10$nyRtiVHP2Gnp9O1fuzvXDO5sB89Ax9Z3JW8RV5PzcnpRG.8bsxvjm\",\n            \"gender\": \"Male\",\n            \"address\": \"123 Street, City, State, Country\",\n            \"hobbies\": [\n                \"reading\",\n                \"traveling\"\n            ],\n            \"dob\": \"1990-01-01T00:00:00.000Z\",\n            \"isActive\": true,\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Remove Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer <JWT_TOKEN>"
+					}
+				],
+				"url": {
+					"raw": "/api/user/:id",
+					"path": [
+						"api",
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Profile Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer <JWT_TOKEN>"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profileImage",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "/api/user/upload-profile-image",
+					"path": [
+						"api",
+						"user",
+						"upload-profile-image"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODZjNTA3MTI0NzRjMzUxNDVhMzMwNCIsImlhdCI6MTcyMDEwODM3NiwiZXhwIjoxNzIwMTExOTc2fQ.K_xc4VqAJJIUpCSBpDoqmP4ZazlYyyoEY-OGBQfxNYw",
+			"type": "string"
+		}
+	]
+}
